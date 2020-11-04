@@ -27,12 +27,12 @@
           <td><%= q.num %> <td>
         <% end %>
         <%end%>
-        <td><%= link_to 'Show', topic, :class => 'btn btn-mini' %></td>
+        <td><%= link_to 'Show', topic, :class => 'btn btn-success btn-sm active' %></td>
       <% if can? :update, topic %>
-        <td><%= link_to 'Edit', edit_topic_path(topic), :class => 'btn btn-mini' %></td>
+        <td><%= link_to 'Edit', edit_topic_path(topic), :class => 'btn btn-warning btn-sm active' %></td>
       <% end %>
       <% if can? :destroy, topic %>
-        <td><%= link_to 'Destroy', topic, :class => 'btn btn-mini', method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Destroy', topic, :class => 'btn btn-danger btn-sm active', method: :delete, data: { confirm: 'Are you sure?' } %></td>
       <% end %>
       </tr>
     <% end %>
@@ -41,6 +41,6 @@
 
 <br>
 <% if can? :update, @topic %>
-  <%= link_to 'New Topic', new_topic_path, :class => 'btn btn-mini' %>
+  <%= link_to 'New Topic', new_topic_path, :class => 'btn btn-success btn-sm active' %>
 <% end %>
-<%= link_to 'Questions', questions_path, :class => 'btn btn-mini' %>
+<%= link_to 'Questions', questions_path, :class => 'btn btn-success btn-sm active' %>

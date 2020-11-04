@@ -2,6 +2,7 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+
 td {
   text-align: left;
 }
@@ -27,7 +28,7 @@ pre {
 }
 
 span.inner-pre {
-    font-size: 130%;
+    font-size: 200%;
     
 }
 
@@ -37,28 +38,28 @@ span.inner-pre {
 
 #searchfpn {
   display: inline-block;
-  width: 1.5em;
-  height: 1.1em;
+  width: 2.0em;
+  height: 1.7em;
   margin: .25em;
 }
 
 #searchfpt {
   display: inline-block;
-  width: 7em;
-  height: 1.1em;
+  width: 9em;
+  height: 1.7em;
   margin: .25em;
 }
 
 #editqa {
   display: inline-block;
   width: 35em;
-  height: 1.1em;
+  height: 1.7em;
   margin: .25em;
 }
 
 #editpresenter {
   display: inline-block;
   width: 14em;
-  height: 1.1em;
+  height: 1.7em;
   margin: .25em;
 }

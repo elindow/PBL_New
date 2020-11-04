@@ -16,7 +16,7 @@
 <% unless pq.nil? %>
     <% pid = pq.id %>
 <% end %>
-  <%= link_to "Previous", Question.find(pid), :class => 'btn btn-mini' %> 
+  <%= link_to "Previous", Question.find(pid), :class => 'btn btn-success btn-sm active' %> 
   <% nq = Question.where(:level => @question.level).find_by_page_and_num(@question.page,@question.num+1)%> | 
   <% if nq.nil? %>
      <% nq = Question.where(:level => @question.level).find_by_page_and_num(@question.page+1,1)%>
@@ -25,14 +25,14 @@
   <% unless nq.nil? %>
      <% nid = nq.id %>
   <% end %>
-  <%= link_to "Next", Question.find(nid), :class => 'btn btn-mini' %> |
+  <%= link_to "Next", Question.find(nid), :class => 'btn btn-success btn-sm active' %> |
   <% if can? :update, @question %>
-    <%= link_to 'Edit', edit_question_path(@question), :class => 'btn btn-mini' %> |
-    <%= link_to "Edit Next", edit_question_path(Question.find(nid)), :class => 'btn btn-mini' %> |  
+    <%= link_to 'Edit', edit_question_path(@question), :class => 'btn btn-success btn-sm active' %> |
+    <%= link_to "Edit Next", edit_question_path(Question.find(nid)), :class => 'btn btn-success btn-sm active' %> |  
   <% end %>
-  <%= link_to 'Back', questions_path, :class => 'btn btn-mini' %> |
+  <%= link_to 'Back', questions_path, :class => 'btn btn-success btn-sm active' %> |
   <% if can? :create, Question %>
-  <%= link_to 'New Question', new_question_path, :class => 'btn btn-mini' %> |
+  <%= link_to 'New Question', new_question_path, :class => 'btn btn-success btn-sm active' %> |
 <% end %>
 </p>
 
@@ -82,7 +82,7 @@
 <% unless pq.nil? %>
     <% pid = pq.id %>
 <% end %>
-<%= link_to "Previous", Question.find(pid), :class => 'btn btn-mini' %> |
+<%= link_to "Previous", Question.find(pid), :class => 'btn btn-success btn-sm active' %> |
 <% nq = Question.where(:level => @question.level).find_by_page_and_num_and_level(@question.page,@question.num+1,@question.level)%>
 <% nid = @question.id %>
 <% if nq.nil? %>
@@ -91,12 +91,12 @@
 <% unless nq.nil? %>
    <% nid = nq.id %>
 <% end %>
-<%= link_to "Next", Question.find(nid), :class => 'btn btn-mini' %> |
+<%= link_to "Next", Question.find(nid), :class => 'btn btn-success btn-sm active' %> |
 <% if can? :update, @question %>
-  <%= link_to 'Edit', edit_question_path(@question), :class => 'btn btn-mini' %> |
+  <%= link_to 'Edit', edit_question_path(@question), :class => 'btn btn-success btn-sm active' %> |
 <% end %>
-<%= link_to 'Back', questions_path, :class => 'btn btn-mini' %> |
+<%= link_to 'Back', questions_path, :class => 'btn btn-success btn-sm active' %> |
 <% if can? :create, Question %>
-  <%= link_to 'New Question', new_question_path, :class => 'btn btn-mini' %>
+  <%= link_to 'New Question', new_question_path, :class => 'btn btn-success btn-sm active' %>
 <% end %>
  |

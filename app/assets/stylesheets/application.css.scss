@@ -12,69 +12,19 @@
 @import "bootstrap";
 body { padding-top: 0px; }
 
+strong.white {
+  color: #eee;
+}
+
+.vcenter {
+    display: inline-block;
+    vertical-align: center;
+    float: none;
+}
+
 @import "scaffolds:";
 
-// Place all the styles related to the questions controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+@import "questions";
 
-td {
-  text-align: left;
-}
 
-table, th, td {
-   border: 1px solid black;
-   padding: 0px 3px 0px 5px;
-}
 
-th {
-    border: 2px solid black; 
-    font-size: 1.1em;
-    text-align: center;
-    padding-top: 2px;
-    padding-bottom: 1px;
-    background-color: #87C942;
-    color: #000000;
-}
-
-pre {
-    border: 2px solid black; 
-    font-family: Consolas,"Lucida Console", Monaco,"Courier New", Courier, monospace;
-}
-
-span.inner-pre {
-    font-size: 130%;
-    
-}
-
-#searchlable {
-  display: inline-block;
-}
-
-#searchfpn {
-  display: inline-block;
-  width: 1.5em;
-  height: 1.1em;
-  margin: .25em;
-}
-
-#searchfpt {
-  display: inline-block;
-  width: 7em;
-  height: 1.1em;
-  margin: .25em;
-}
-
-#editqa {
-  display: inline-block;
-  width: 35em;
-  height: 1.1em;
-  margin: .25em;
-}
-
-#editpresenter {
-  display: inline-block;
-  width: 14em;
-  height: 1.1em;
-  margin: .25em;
-}

@@ -1,10 +1,10 @@
 <h2>List of Questions</h2>
 
 <% if can? :create, Question %>
-  <%= link_to 'New Question', new_question_path, :class => 'btn btn-mini' %>
+  <%= link_to 'New Question', new_question_path, :class => 'btn btn-success btn-sm active' %>
 <% end %>
-<%= link_to 'Topics', topics_path, :class => 'btn btn-sm' %>
-<%= link_to 'Next Page', questions_path, :class => 'btn btn-mini' %>
+<%= link_to 'Topics', topics_path, :class => 'btn btn-success btn-sm active' %>
+<%= link_to 'Next Page', questions_path, :class => 'btn btn-success btn-sm' %>
 <%= " There are currently #{Question.where(:level => 1).count} level 1 and #{Question.where(:level => 2).count} 1evel 2 questions in the list, #{Question.where(:level => 1).maximum("page")} pages in Book 1, #{Question.where(:level => 2).maximum("page")} pages in Book 2." %>
 <br>
 <%= search_form_for @q do |f| %>
@@ -75,12 +75,12 @@
         <% end %>
         <td><%= question.topics.count %></td>
         <td><%= i %></td>
-        <td><%= link_to 'Show', question, :class => 'btn btn-xs' %></td>
+        <td><%= link_to 'Show', question, :class => 'btn btn-success btn-sm active' %></td>
         <% if can? :update, question %>
-          <td><%= link_to 'Edit', edit_question_path(question), :class => 'btn btn-mini' %></td>
+          <td><%= link_to 'Edit', edit_question_path(question), :class => 'btn btn-warning btn-sm active' %></td>
         <% end %>
         <% if can? :destroy, question %>
-          <td><%= link_to 'Destroy', question, method: :delete, data: { confirm: 'Are you sure?' }, :class => 'btn btn-mini' %></td>
+          <td><%= link_to 'Destroy', question, method: :delete, data: { confirm: 'Are you sure?' }, :class => 'btn btn-danger btn-sm active' %></td>
         <% end %>
       </tr>
     <% end %>
@@ -90,6 +90,6 @@
 
 <br>
 <% if can? :create, Question %>
-  <%= link_to 'New Question', new_question_path, :class => 'btn btn-mini' %>
+  <%= link_to 'New Question', new_question_path, :class => 'btn btn-success btn-sm active' %>
 <% end %>
-<%= link_to 'Topics', topics_path, :class => 'btn btn-mini' %>
+<%= link_to 'Topics', topics_path, :class => 'btn btn-success btn-sm active' %>
