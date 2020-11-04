@@ -16,7 +16,7 @@ ActiveRecord::Schema.define(version: 20160902200221) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "perf_types", force: true do |t|
+  create_table "perf_types", force: :cascade do |t|
     t.integer  "ps"
     t.integer  "pt"
     t.integer  "as"
@@ -33,7 +33,7 @@ ActiveRecord::Schema.define(version: 20160902200221) do
   add_index "perf_types", ["question_id"], name: "index_perf_types_on_question_id", using: :btree
   add_index "perf_types", ["student_id"], name: "index_perf_types_on_student_id", using: :btree
 
-  create_table "questions", force: true do |t|
+  create_table "questions", force: :cascade do |t|
     t.integer  "num"
     t.integer  "page"
     t.text     "qtext"
@@ -49,12 +49,12 @@ ActiveRecord::Schema.define(version: 20160902200221) do
     t.integer  "level"
   end
 
-  create_table "questions_topics", id: false, force: true do |t|
+  create_table "questions_topics", id: false, force: :cascade do |t|
     t.integer "question_id", null: false
     t.integer "topic_id",    null: false
   end
 
-  create_table "students", force: true do |t|
+  create_table "students", force: :cascade do |t|
     t.string   "lname"
     t.string   "fname"
     t.string   "clsname"
@@ -65,7 +65,7 @@ ActiveRecord::Schema.define(version: 20160902200221) do
     t.string   "inits"
   end
 
-  create_table "topics", force: true do |t|
+  create_table "topics", force: :cascade do |t|
     t.string   "topicName"
     t.text     "comments"
     t.datetime "created_at"
@@ -74,7 +74,7 @@ ActiveRecord::Schema.define(version: 20160902200221) do
     t.boolean  "lev2"
   end
 
-  create_table "users", force: true do |t|
+  create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "",    null: false
     t.string   "encrypted_password",     default: "",    null: false
     t.string   "reset_password_token"
